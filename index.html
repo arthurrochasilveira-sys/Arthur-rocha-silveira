@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologia no Agro | Agrinho 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Cursor Glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+    <button class="close-btn" onclick="closeMobileNav()">
+        <iconify-icon icon="lucide:x"></iconify-icon>
+    </button>
+    <a href="#inicio" onclick="closeMobileNav()">Início</a>
+    <a href="#sobre" onclick="closeMobileNav()">Sobre</a>
+    <a href="#tecnologias" onclick="closeMobileNav()">Tecnologias</a>
+    <a href="#dados" onclick="closeMobileNav()">Dados</a>
+    <a href="#quiz" onclick="closeMobileNav()">Quiz</a>
+    <a href="#galeria" onclick="closeMobileNav()">Galeria</a>
+</div>
+
+<!-- Navigation -->
+<nav id="navbar">
+    <a href="#inicio" class="nav-logo">
+        <iconify-icon icon="lucide:sprout"></iconify-icon>
+        <span>AgroTech</span>
+    </a>
+    <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#tecnologias">Tecnologias</a></li>
+        <li><a href="#dados">Dados</a></li>
+        <li><a href="#linha-do-tempo">Timeline</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#cta" class="nav-cta">Explorar</a></li>
+    </ul>
+    <button class="mobile-toggle" onclick="openMobileNav()">
+        <iconify-icon icon="lucide:menu"></iconify-icon>
+    </button>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="inicio">
+    <div class="hero-bg">
+        <canvas id="heroCanvas"></canvas>
+    </div>
+    <div class="hero-grid"></div>
+    <div class="hero-gradient-orb orb-1"></div>
+    <div class="hero-gradient-orb orb-2"></div>
+    <div class="hero-gradient-orb orb-3"></div>
+
+    <div class="hero-content">
+        <div class="hero-badge">
+            <span class="dot"></span>
+            Agrinho 2025 — Competição
+        </div>
+        <h1>
+            <span class="line">Tecnologia no</span>
+            <span class="line"><span class="highlight">Agro Brasileiro</span></span>
+        </h1>
+        <p>Descubra como a inovação está transformando o campo, aumentando a produtividade e preservando os recursos naturais do nosso país.</p>
+        <div class="hero-buttons">
+            <a href="#tecnologias" class="btn btn-primary">
+                <iconify-icon icon="lucide:rocket"></iconify-icon>
+                Explorar Tecnologias
+            </a>
+            <a href="#quiz" class="btn btn-secondary">
+                <iconify-icon icon="lucide:brain"></iconify-icon>
+                Testar Conhecimentos
+            </a>
+        </div>
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <div class="number" data-target="77">0</div>
+                <div class="label">% do agro usa tech</div>
+            </div>
+            <div class="hero-stat">
+                <div class="number" data-target="250">0</div>
+                <div class="label">% aumento prod.</div>
+            </div>
+            <div class="hero-stat">
+                <div class="number" data-target="40">0</div>
+                <div class="label">% menos água</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-indicator">
+        <div class="mouse"></div>
+        Scroll
+    </div>
+</section>
+
+<!-- About -->
+<section class="about" id="sobre">
+    <div class="section-container">
+        <div class="about-grid">
+            <div class="about-visual reveal">
+                <img src="https://picsum.photos/seed/agrodrone/800/600.jpg" alt="Drone na agricultura">
+                <div class="overlay"></div>
+                <div class="float-card">
+                    <div class="icon-box">
+                        <iconify-icon icon="lucide:plane"></iconify-icon>
+                    </div>
+                    <div class="text">
+                        <strong>Drones Agrícolas</strong>
+                        <span>Monitoramento em tempo real</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-content reveal reveal-delay-2">
+                <div class="section-tag">
+                    <span class="line"></span>
+                    Sobre o Tema
+                    <span class="line"></span>
+                </div>
+                <h2>O Futuro do Campo Já <span class="highlight">Começou</span></h2>
+                <p>O Brasil é um dos maiores produtores agrícolas do mundo, e a tecnologia é a grande aliada para manter e ampliar essa liderança. Da semente à colheita, a inovação está presente em cada etapa da cadeia produtiva.</p>
+                <p>Agricultura de precisão, inteligência artificial, internet das coisas e biotecnologia são apenas alguns dos pilares que sustentam o agro tecnológico brasileiro.</p>
+                <div class="about-features">
+                    <div class="about-feature">
+                        <iconify-icon icon="lucide:satellite"></iconify-icon>
+                        <span>Sensores IoT</span>
+                    </div>
+                    <div class="about-feature">
+                        <iconify-icon icon="lucide:cpu"></iconify-icon>
+                        <span>Inteligência Artificial</span>
+                    </div>
+                    <div class="about-feature">
+                        <iconify-icon icon="lucide:map-pin"></iconify-icon>
+                        <span>GPS de Precisão</span>
+                    </div>
+                    <div class="about-feature">
+                        <iconify-icon icon="lucide:droplets"></iconify-icon>
+                        <span>Irrigação Inteligente</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technologies -->
+<section id="tecnologias">
+    <div class="section-container">
+        <div class="section-header reveal">
+            <div class="section-tag">
+                <span class="line"></span>
+                Tecnologias
+                <span class="line"></span>
+            </div>
+            <h2>Inovações que Transformam o Campo</h2>
+            <p>Conheça as principais tecnologias que estão revolucionando a agricultura brasileira e mundial.</p>
+        </div>
+        <div class="tech-grid">
+            <div class="tech-card reveal reveal-delay-1">
+                <div class="card-icon">
+                    <iconify-icon icon="lucide:plane"></iconify-icon>
+                </div>
+                <h3>Drones Agrícolas</h3>
+                <p>Equipados com câmeras multiespectrais e sensores, os drones mapeiam lavouras, identificam pragas e otimizam a aplicação de defensivos com precisão centimétrica.</p>
+                <span class="card-tag">Mapeamento Aéreo</span>
+            </div>
+            <div class="tech-card reveal reveal-delay-2">
+                <div class="card-icon">
+                    <iconify-icon icon="lucide:brain-circuit"></iconify-icon>
+                </div>
+                <h3>Inteligência Artificial</h3>
+                <p>Algoritmos de IA analisam dados climáticos, de solo e imagens de satélite para prever safras, detectar doenças e recomendar ações em tempo real.</p>
+                <span class="card-tag">Machine Learning</span>
+            </div>
+            <div class="tech-card reveal reveal-delay-3">
+                <div class="card-icon">
+                    <iconify-icon icon="lucide:radar"></iconify-icon>
+                </div>
+                <h3>Sensores IoT</h3>
+                <p>Dispositivos conectados monitoram umidade do solo, temperatura, luminosidade e nutrientes, enviando dados em tempo real para o produtor.</p>
+                <span class="card-tag">Conectividade</span>
+            </div>
+            <div class="tech-card reveal reveal-delay-1">
+                <div class="card-icon">
+                    <iconify-icon icon="lucide:crosshair"></iconify-icon>
+                </div>
+                <h3>Agricultura de Precisão</h3>
+                <p>Utilizando GPS e sistemas de navegação por satélite, cada metro quadrado da lavoura recebe o tratamento exato que necessita, reduzindo desperdícios.</p>
+                <span class="card-tag">GPS & GNSS</span>
+            </div>
+            <div class="tech-card reveal reveal-delay-2">
+                <div class="card-icon">
+                    <iconify-icon icon="lucide:dna"></iconify-icon>
+                </div>
+                <h3>Biotecnologia</h3>
+                <p>O melhoramento genético e a engenharia genética criam variedades mais resistentes a pragas, secas e doenças, garantindo maior produtividade.</p>
+                <span class="card-tag">Genética Avançada</span>
+            </div>
+            <div class="tech-card reveal reveal-delay-3">
+                <div class="card-icon">
+                    <iconify-icon icon="lucide:cog"></iconify-icon>
+                </div>
+                <h3>Automação e Robótica</h3>
+                <p>Tratores autônomos, colhedoras inteligentes e robôs de pulverização operam 24 horas por dia com alta precisão e eficiência.</p>
+                <span class="card-tag">Robótica</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats -->
+<section class="stats" id="dados">
+    <div class="section-container">
+        <div class="section-header reveal">
+            <div class="section-tag">
+                <span class="line"></span>
+                Dados
+                <span class="line"></span>
+            </div>
+            <h2>Números que Impressionam</h2>
+            <p>O impacto real da tecnologia no agronegócio brasileiro.</p>
+        </div>
+        <div class="stats-inner">
+            <div class="stat-card reveal reveal-delay-1">
+                <div class="stat-icon">
+                    <iconify-icon icon="lucide:wheat"></iconify-icon>
+                </div>
+                <div class="stat-number" data-target="335">0</div>
+                <div class="stat-label">Milhões de toneladas de soja (2024)</div>
+            </div>
+            <div class="stat-card reveal reveal-delay-2">
+                <div class="stat-icon">
+                    <iconify-icon icon="lucide:trending-up"></iconify-icon>
+                </div>
+                <div class="stat-number" data-target="12">0</div>
+                <div class="stat-label">% de crescimento anual com tech</div>
+            </div>
+            <div class="stat-card reveal reveal-delay-3">
+                <div class="stat-icon">
+                    <iconify-icon icon="lucide:leaf"></iconify-icon>
+                </div>
+                <div class="stat-number" data-target="30">0</div>
+                <div class="stat-label">% redução no uso de defensivos</div>
+            </div>
+            <div class="stat-card reveal reveal-delay-4">
+                <div class="stat-icon">
+                    <iconify-icon icon="lucide:users"></iconify-icon>
+                </div>
+                <div class="stat-number" data-target="5">0</div>
+                <div class="stat-label">Milhões de produtores conectados</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Timeline -->
+<section id="linha-do-tempo">
+    <div class="section-container">
+        <div class="section-header reveal">
+            <div class="section-tag">
+                <span class="line"></span>
+                Evolução
+                <span class="line"></span>
+            </div>
+            <h2>Linha do Tempo da Inovação</h2>
+            <p>A evolução tecnológica no campo brasileiro nas últimas décadas.</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item reveal">
+                <div class="timeline-content">
+                    <div class="timeline-year">Década de 1970</div>
+                    <h3>Revolução Verde</h3>
+                    <p>Introdução de sementes melhoradas e fertilizantes químicos no Brasil, iniciando a modernização agrícola.</p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-content">
+                    <div class="timeline-year">Década de 1990</div>
+                    <h3>GPS no Campo</h3>
+                    <p>Primeiros tratores com sistema de navegação por GPS, marcando o início da agricultura de precisão no país.</p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-content">
+                    <div class="timeline-year">Década de 2000</div>
+                    <h3>Transgênicos e Biotech</h3>
+                    <p>Aprovação e adoção de sementes geneticamente modificadas, aumentando resistência e produtividade.</p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-content">
+                    <div class="timeline-year">Década de 2010</div>
+                    <h3>Era Digital</h3>
+                    <p>Explosão de aplicativos, big data, sensores IoT e os primeiros drones comerciais para agricultura.</p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-content">
+                    <div class="timeline-year">Década de 2020</div>
+                    <h3>IA e Automação Total</h3>
+                    <p>Inteligência artificial, tratores autônomos, robôs de colheita e agricultura regenerativa impulsionada por dados.</p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quiz -->
+<section class="quiz" id="quiz">
+    <div class="section-container">
+        <div class="section-header reveal">
+            <div class="section-tag">
+                <span class="line"></span>
+                Interativo
+                <span class="line"></span>
+            </div>
+            <h2>Teste seus Conhecimentos</h2>
+            <p>Responda o quiz sobre tecnologia no agro e descubra quanto você sabe!</p>
+        </div>
+        <div class="quiz-container reveal">
+            <div class="quiz-card">
+                <div class="quiz-progress" id="quizProgress"></div>
+                <div id="quizContent">
+                    <div class="quiz-question" id="quizQuestion"></div>
+                    <div class="quiz-options" id="quizOptions"></div>
+                    <div class="quiz-feedback" id="quizFeedback"></div>
+                    <div class="quiz-next" id="quizNext">
+                        <button class="btn btn-primary" onclick="nextQuestion()">
+                            Próxima Pergunta
+                            <iconify-icon icon="lucide:arrow-right"></iconify-icon>
+                        </button>
+                    </div>
+                </div>
+                <div class="quiz-result" id="quizResult">
+                    <div class="score-circle">
+                        <div class="score-num" id="scoreNum">0</div>
+                        <div class="score-total" id="scoreTotal">/ 5</div>
+                    </div>
+                    <h3 id="resultTitle">Parabéns!</h3>
+                    <p id="resultText">Você tem um ótimo conhecimento sobre tecnologia no agro.</p>
+                    <button class="btn btn-primary" onclick="restartQuiz()">
+                        <iconify-icon icon="lucide:refresh-cw"></iconify-icon>
+                        Jogar Novamente
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits -->
+<section id="beneficios">
+    <div class="section-container">
+        <div class="section-header reveal">
+            <div class="section-tag">
+                <span class="line"></span>
+                Benefícios
+                <span class="line"></span>
+            </div>
+            <h2>Por que Investir em AgroTech?</h2>
+            <p>Os benefícios concretos da tecnologia para o produtor e para o meio ambiente.</p>
+        </div>
+        <div class="benefits-grid">
+            <div class="benefit-card reveal reveal-delay-1">
+                <div class="benefit-num">01</div>
+                <div>
+                    <h3>Menos Desperdício</h3>
+                    <p>Agricultura de precisão reduz o uso de insumos em até 30%, economizando recursos e protegendo o solo.</p>
+                </div>
+            </div>
+            <div class="benefit-card reveal reveal-delay-2">
+                <div class="benefit-num">02</div>
+                <div>
+                    <h3>Maior Produtividade</h3>
+                    <p>Com IA e automação, a produtividade por hectare pode aumentar até 40% em comparação com métodos tradicionais.</p>
+                </div>
+            </div>
+            <div class="benefit-card reveal reveal-delay-3">
+                <div class="benefit-num">03</div>
+                <div>
+                    <h3>Sustentabilidade</h3>
+                    <p>Tecnologias como irrigação inteligente e biotecnologia reduzem o impacto ambiental e preservam recursos hídricos.</p>
+                </div>
+            </div>
+            <div class="benefit-card reveal reveal-delay-4">
+                <div class="benefit-num">04</div>
+                <div>
+                    <h3>Decisões Inteligentes</h3>
+                    <p>Dados em tempo real permitem que o produtor tome decisões baseadas em evidências, não em achismos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery -->
+<section class="gallery" id="galeria">
+    <div class="section-container">
+        <div class="section-header reveal">
+            <div class="section-tag">
+                <span class="line"></span>
+                Galeria
+                <span class="line"></span>
+            </div>
+            <h2>Tecnologia em Ação</h2>
+            <p>Imagens que mostram a realidade do agro tecnológico brasileiro.</p>
+        </div>
+        <div class="gallery-grid reveal">
+            <div class="gallery-item">
+                <img src="https://picsum.photos/seed/agrotech1/800/600.jpg" alt="Campo tecnológico">
+                <div class="gallery-overlay">
+                    <span>Drone de Monitoramento</span>
+                    <h4>Vista aérea de lavoura inteligente</h4>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/seed/soybean2/400/300.jpg" alt="Soja">
+                <div class="gallery-overlay">
+                    <span>Cultivo de Soja</span>
+                    <h4>Alta produtividade com biotech</h4>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/seed/tractor3/400/300.jpg" alt="Trator">
+                <div class="gallery-overlay">
+                    <span>Automação</span>
+                    <h4>Trator com piloto automático</h4>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/seed/sensor4/400/300.jpg" alt="Sensores">
+                <div class="gallery-overlay">
+                    <span>IoT no Campo</span>
+                    <h4>Sensores de umidade do solo</h4>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/seed/harvest5/400/300.jpg" alt="Colheita">
+                <div class="gallery-overlay">
+                    <span>Colheita Inteligente</span>
+                    <h4>Máquinas de última geração</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="cta">
+    <div class="section-container">
+        <div class="cta-box reveal">
+            <h2>O Agro é <span class="cta-highlight">Tecnologia</span></h2>
+            <p>A junção entre campo e inovação é o que torna o Brasil uma potência mundial. O futuro do agro já começou.</p>
+            <a href="#inicio" class="btn btn-primary">
+                <iconify-icon icon="lucide:arrow-up"></iconify-icon>
+                Voltar ao Topo
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <a href="#inicio" class="nav-logo">
+                <iconify-icon icon="lucide:sprout"></iconify-icon>
+                <span>AgroTech</span>
+            </a>
+            <p>Projeto desenvolvido para a competição do Agrinho 2025, com o tema "Tecnologia no Agro". Mostrando como a inovação transforma o campo brasileiro.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Navegação</h4>
+            <a href="#sobre">Sobre</a>
+            <a href="#tecnologias">Tecnologias</a>
+            <a href="#dados">Dados</a>
+            <a href="#linha-do-tempo">Timeline</a>
+        </div>
+        <div class="footer-col">
+            <h4>Interativo</h4>
+            <a href="#quiz">Quiz</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#beneficios">Benefícios</a>
+        </div>
+        <div class="footer-col">
+            <h4>Referências</h4>
+            <a href="#">EMBRAPA</a>
+            <a href="#">IBGE Agro</a>
+            <a href="#">Agrinho 2025</a>
+            <a href="#">MAPA</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2025 AgroTech — Projeto Agrinho</span>
+        <span>Feito com 💙 para o futuro do agro</span>
+    </div>
+</footer>
+
+<!-- Toast Container -->
+<div class="toast-container" id="toastContainer"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
